@@ -11,10 +11,8 @@ Description:
     
 """
 # import modules
+import os
 import tkinter as tk
-from tkinter import ttk
-from PIL import Image, ImageTk
-import numpy as np
 
 
 def center(win):
@@ -57,7 +55,7 @@ def change_source_win(root):
     center(inventory_win)
     
     # add menubar
-    add_menubar(inventory_win, root)
+    m = Menubar(inventory_win, root)
     
     # add label
     label1 = tk.Label(inventory_win,text = "Please enter name of inventory source:",
@@ -160,7 +158,7 @@ def get_inventory():
 class Source:
     
     def __init__(self):
-        self.source = "inventory.txt"
+        self.source = os.path.abspath("src/textfiles/inventory.txt")
         
     #method to change source
     def change_source(self,source):

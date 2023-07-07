@@ -13,8 +13,6 @@ Description:
 """
 # import modules
 import tkinter as tk
-from tkinter import ttk
-from PIL import Image, ImageTk
 
 #import capstone modules
 from capstone_IV_general import *
