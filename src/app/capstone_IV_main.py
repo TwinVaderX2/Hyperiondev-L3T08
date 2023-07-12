@@ -10,7 +10,7 @@ Description:
 Code a Python program that will read from the text file inventory.txt and
 perform the following on the data, to prepare for presentation to your
 managers:
-o   We’ve provided a template for you in a file named inventory.py.
+o   We've provided a template for you in a file named inventory.py.
 o   Inside this file, you will find a class named Shoe with the following
     attributes:
     ●   country,
@@ -39,7 +39,7 @@ o   Then you must define the following functions outside the class:
     ▪   view_all - This function will iterate over the shoes list and
         print the details of the shoes returned from the __str__
         function. Optional: you can organise your data in a table
-        format by using Python’s tabulate module.
+        format by using Python's tabulate module.
     ▪   re_stock - This function will find the shoe object with the
         lowest quantity, which are the shoes that need to be
         re-stocked. Ask the user if they want to add this quantity of
@@ -59,8 +59,9 @@ o   Now in your main create a menu that executes each function
 above. This menu should be inside the while loop. Be creative!
 """
 # import modules
+import os
+
 import tkinter as tk
-from tkinter import ttk
 from PIL import Image, ImageTk
 
 # import capstone_IV project modules
@@ -79,7 +80,7 @@ root.title("Stock Manager")
 center(root)
 
 # change window icon
-icon = Image.open("compulsory task/twinvader_icon.png")
+icon = Image.open(os.path.abspath("src/images/twinvader_icon.png"))
 photo = ImageTk.PhotoImage(icon)
 root.wm_iconphoto(True,photo)
 
@@ -101,15 +102,15 @@ heading_lab = tk.Label(root,text = "Please choose from options below:",
                        ).grid(row = 0, column = 0, columnspan = 2)
 
 # add images/logos
-nike_logo = Image.open("compulsory task/nike.png")
+nike_logo = Image.open(os.path.abspath("src/images/nike.png"))
 nike_logo = nike_logo.resize((80,50))
 nike_logo = ImageTk.PhotoImage(nike_logo)
 
-addidas_logo = Image.open("compulsory task/addidas.png")
+addidas_logo = Image.open(os.path.abspath("src/images/addidas.png"))
 addidas_logo = addidas_logo.resize((80,50))
 addidas_logo = ImageTk.PhotoImage(addidas_logo)
 
-puma_logo = Image.open("compulsory task/puma.png")
+puma_logo = Image.open(os.path.abspath("src/images/puma.png"))
 puma_logo = puma_logo.resize((80,50))
 puma_logo = ImageTk.PhotoImage(puma_logo)
 

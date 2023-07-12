@@ -14,9 +14,6 @@ Description:
 
 # import modules
 import tkinter as tk
-from tkinter import ttk
-from PIL import Image, ImageTk
-from itertools import islice
 import babel.numbers
 
 # import capstone modules

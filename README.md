@@ -6,7 +6,7 @@ Containerise your Python app application from the last capstone of Level I. Do a
 * Create an appropriate Dockerfile for your code.
 * Create an image from this Dockerfile.
 * Upload your image to Docker Hub.
-* Ensure that your image can run on a machine that isn’t your computer by using Docker Playground.
+* Ensure that your image can run on a machine that isn't your computer by using Docker Playground.
 
 Submit the following:
 * The Dockerfile you created.

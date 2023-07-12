@@ -13,14 +13,11 @@ Description:
 """
 # import modules
 import tkinter as tk
-from tkinter import ttk
-from PIL import Image, ImageTk
-from itertools import islice
 import babel.numbers
 
 # import capstone modules
 from capstone_IV_general import *
-from capstone_IV_add_item import *
+from capstone_IV_add_item import add_item
 
 def view_all(root):
     # create new window
