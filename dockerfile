@@ -7,7 +7,10 @@ WORKDIR /usr/app/src
 # Install tkinter
 RUN apt-get update && apt-get install -y python3-tk
 
-#to COPY the remote file at working directory in container
+# RUN apt-get update && apt-get install -y libx11-6 libxext-dev libxrender-dev libxinerama-dev libxi-dev libxrandr-dev libxcursor-dev libxtst-dev tk-dev && rm -rf /var/lib/apt/lists/*
+
+
+# /.to COPY the remote file at working directory in container
 COPY src/* ./
 COPY requirements.txt ./
 # Now the structure looks like this:
@@ -22,5 +25,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 #CMD instruction should be used to run the software
 #contained by your image, along with any arguments.
+
 CMD [ "./capstone_IV_main.py"]
 ENTRYPOINT [ "python3" ]

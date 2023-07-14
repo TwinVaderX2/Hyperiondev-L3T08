@@ -158,7 +158,7 @@ def get_inventory():
 class Source:
     
     def __init__(self):
-        self.source = os.path.abspath("src/textfiles/inventory.txt")
+        self.source = os.path.abspath("../textfiles/inventory.txt")
         
     #method to change source
     def change_source(self,source):

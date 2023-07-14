@@ -60,6 +60,9 @@ above. This menu should be inside the while loop. Be creative!
 """
 # import modules
 import os
+import matplotlib
+matplotlib.use('Agg')
+
 
 import tkinter as tk
 from PIL import Image, ImageTk
@@ -80,7 +83,7 @@ root.title("Stock Manager")
 center(root)
 
 # change window icon
-icon = Image.open(os.path.abspath("src/images/twinvader_icon.png"))
+icon = Image.open(os.path.abspath("../images/twinvader_icon.png"))
 photo = ImageTk.PhotoImage(icon)
 root.wm_iconphoto(True,photo)
 
@@ -102,15 +105,15 @@ heading_lab = tk.Label(root,text = "Please choose from options below:",
                        ).grid(row = 0, column = 0, columnspan = 2)
 
 # add images/logos
-nike_logo = Image.open(os.path.abspath("src/images/nike.png"))
+nike_logo = Image.open(os.path.abspath("../images/nike.png"))
 nike_logo = nike_logo.resize((80,50))
 nike_logo = ImageTk.PhotoImage(nike_logo)
 
-addidas_logo = Image.open(os.path.abspath("src/images/addidas.png"))
+addidas_logo = Image.open(os.path.abspath("../images/addidas.png"))
 addidas_logo = addidas_logo.resize((80,50))
 addidas_logo = ImageTk.PhotoImage(addidas_logo)
 
-puma_logo = Image.open(os.path.abspath("src/images/puma.png"))
+puma_logo = Image.open(os.path.abspath("../images/puma.png"))
 puma_logo = puma_logo.resize((80,50))
 puma_logo = ImageTk.PhotoImage(puma_logo)
 
